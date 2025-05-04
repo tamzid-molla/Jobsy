@@ -1,0 +1,422 @@
+[
+    {
+        "id": "1",
+        "name": "TechTrend Innovations",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/0/09/Tech_Company_Logo.png",
+        "location": "San Francisco, CA",
+        "website": "https://www.salesforce.com",
+        "industry": "Technology",
+        "jobs": [
+            {
+                "id": "job-001",
+                "title": "Senior Software Engineer",
+                "bannerImage": "https://example.com/banners/software-engineer.jpg",
+                "location": "Remote",
+                "salary": "$120,000 - $160,000",
+                "jobType": "Full-time",
+                "description": "Develop and maintain scalable web applications using modern frameworks.",
+                "requirements": [
+                    "5+ years of experience in software development",
+                    "Expertise in JavaScript, Node.js, and React",
+                    "Strong knowledge of cloud services (AWS, Azure)",
+                    "Experience with CI/CD pipelines",
+                    "Excellent communication skills"
+                ]
+            },
+            {
+                "id": "job-002",
+                "title": "Product Manager",
+                "bannerImage": "https://example.com/banners/product-manager.jpg",
+                "location": "San Francisco, CA",
+                "salary": "$100,000 - $140,000",
+                "jobType": "Full-time",
+                "description": "Lead product development from ideation to launch.",
+                "requirements": [
+                    "3+ years of product management experience",
+                    "Strong understanding of Agile methodologies",
+                    "Experience with user research and analytics",
+                    "Ability to work cross-functionally",
+                    "Strong problem-solving skills"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "GreenWave Solutions",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Renewable_Energy_Logo.png",
+        "location": "Austin, TX",
+        "website": "https://www.tesla.com",
+        "industry": "Renewable Energy",
+        "jobs": [
+            {
+                "id": "job-003",
+                "title": "Environmental Engineer",
+                "bannerImage": "https://example.com/banners/env-engineer.jpg",
+                "location": "Austin, TX",
+                "salary": "$90,000 - $120,000",
+                "jobType": "Full-time",
+                "description": "Design and implement sustainable energy solutions.",
+                "requirements": [
+                    "Bachelor’s degree in Environmental Engineering",
+                    "3+ years of experience in renewable energy projects",
+                    "Knowledge of environmental regulations",
+                    "Proficiency in AutoCAD",
+                    "Strong analytical skills"
+                ]
+            },
+            {
+                "id": "job-004",
+                "title": "Data Analyst",
+                "bannerImage": "https://example.com/banners/data-analyst.jpg",
+                "location": "Remote",
+                "salary": "$80,000 - $110,000",
+                "jobType": "Full-time",
+                "description": "Analyze data to optimize energy efficiency programs.",
+                "requirements": [
+                    "Proficiency in Python and SQL",
+                    "Experience with data visualization tools",
+                    "Strong statistical analysis skills",
+                    "Ability to interpret complex datasets",
+                    "Excellent written and verbal communication"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "HealthSync Technologies",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Healthcare_Logo.png",
+        "location": "Boston, MA",
+        "website": "https://www.epic.com",
+        "industry": "Healthcare",
+        "jobs": [
+            {
+                "id": "job-005",
+                "title": "DevOps Engineer",
+                "bannerImage": "https://example.com/banners/devops.jpg",
+                "location": "Boston, MA",
+                "salary": "$110,000 - $150,000",
+                "jobType": "Full-time",
+                "description": "Manage and optimize cloud infrastructure for healthcare applications.",
+                "requirements": [
+                    "Experience with Docker and Kubernetes",
+                    "Proficiency in Terraform and Ansible",
+                    "Knowledge of AWS or GCP",
+                    "Strong scripting skills (Python, Bash)",
+                    "Understanding of HIPAA compliance"
+                ]
+            },
+            {
+                "id": "job-006",
+                "title": "UX Designer",
+                "bannerImage": "https://example.com/banners/ux-designer.jpg",
+                "location": "Remote",
+                "salary": "$90,000 - $120,000",
+                "jobType": "Full-time",
+                "description": "Design user-friendly interfaces for healthcare platforms.",
+                "requirements": [
+                    "3+ years of UX design experience",
+                    "Proficiency in Figma or Sketch",
+                    "Experience with user testing and prototyping",
+                    "Strong portfolio showcasing design projects",
+                    "Knowledge of accessibility standards"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "EduFuture Systems",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Education_Tech_Logo.png",
+        "location": "New York, NY",
+        "website": "https://www.coursera.org",
+        "industry": "Education Technology",
+        "jobs": [
+            {
+                "id": "job-007",
+                "title": "Curriculum Developer",
+                "bannerImage": "https://example.com/banners/curriculum-dev.jpg",
+                "location": "New York, NY",
+                "salary": "$70,000 - $100,000",
+                "jobType": "Full-time",
+                "description": "Create engaging online learning content.",
+                "requirements": [
+                    "Experience in instructional design",
+                    "Knowledge of learning management systems",
+                    "Strong writing and editing skills",
+                    "Familiarity with educational standards",
+                    "Ability to work with subject matter experts"
+                ]
+            },
+            {
+                "id": "job-008",
+                "title": "Frontend Developer",
+                "bannerImage": "https://example.com/banners/frontend-dev.jpg",
+                "location": "Remote",
+                "salary": "$90,000 - $130,000",
+                "jobType": "Full-time",
+                "description": "Build interactive web interfaces for e-learning platforms.",
+                "requirements": [
+                    "Proficient in HTML, CSS, and JavaScript",
+                    "Experience with React or Vue.js",
+                    "Familiarity with RESTful APIs",
+                    "Good understanding of responsive design",
+                    "Excellent problem-solving skills"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "FinCore Solutions",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Fintech_Logo.png",
+        "location": "Chicago, IL",
+        "website": "https://www.stripe.com",
+        "industry": "Financial Technology",
+        "jobs": [
+            {
+                "id": "job-009",
+                "title": "Backend Developer",
+                "bannerImage": "https://example.com/banners/backend-dev.jpg",
+                "location": "Remote",
+                "salary": "$100,000 - $140,000",
+                "jobType": "Full-time",
+                "description": "Build and maintain secure APIs for financial applications.",
+                "requirements": [
+                    "Proficiency in Python or Java",
+                    "Experience with microservices architecture",
+                    "Knowledge of database systems (SQL, NoSQL)",
+                    "Familiarity with security best practices",
+                    "Strong problem-solving skills"
+                ]
+            },
+            {
+                "id": "job-010",
+                "title": "Compliance Analyst",
+                "bannerImage": "https://example.com/banners/compliance.jpg",
+                "location": "Chicago, IL",
+                "salary": "$80,000 - $110,000",
+                "jobType": "Full-time",
+                "description": "Ensure compliance with financial regulations and standards.",
+                "requirements": [
+                    "Knowledge of financial regulations (e.g., SEC, FINRA)",
+                    "Experience in compliance auditing",
+                    "Strong attention to detail",
+                    "Excellent analytical skills",
+                    "Ability to interpret legal documents"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "name": "AgriTech Ventures",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Agtech_Logo.png",
+        "location": "Des Moines, IA",
+        "website": "https://www.johndeere.com",
+        "industry": "Agriculture Technology",
+        "jobs": [
+            {
+                "id": "job-011",
+                "title": "IoT Engineer",
+                "bannerImage": "https://example.com/banners/iot-engineer.jpg",
+                "location": "Des Moines, IA",
+                "salary": "$95,000 - $130,000",
+                "jobType": "Full-time",
+                "description": "Develop IoT solutions for smart agriculture systems.",
+                "requirements": [
+                    "Experience with IoT protocols (MQTT, CoAP)",
+                    "Proficiency in embedded systems programming",
+                    "Knowledge of sensor integration",
+                    "Familiarity with cloud platforms",
+                    "Strong problem-solving skills"
+                ]
+            },
+            {
+                "id": "job-012",
+                "title": "Agronomist",
+                "bannerImage": "https://example.com/banners/agronomist.jpg",
+                "location": "Remote",
+                "salary": "$70,000 - $100,000",
+                "jobType": "Full-time",
+                "description": "Analyze crop data to improve agricultural yields.",
+                "requirements": [
+                    "Degree in Agronomy or related field",
+                    "Experience with precision agriculture tools",
+                    "Strong data analysis skills",
+                    "Knowledge of crop management practices",
+                    "Excellent communication skills"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "name": "RetailFlow Systems",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Retail_Tech_Logo.png",
+        "location": "Seattle, WA",
+        "website": "https://www.amazon.com",
+        "industry": "Retail Technology",
+        "jobs": [
+            {
+                "id": "job-013",
+                "title": "Mobile App Developer",
+                "bannerImage": "https://example.com/banners/mobile-dev.jpg",
+                "location": "Remote",
+                "salary": "$100,000 - $140,000",
+                "jobType": "Full-time",
+                "description": "Develop mobile apps for retail customer engagement.",
+                "requirements": [
+                    "Experience with React Native or Flutter",
+                    "Proficiency in iOS and Android development",
+                    "Knowledge of API integration",
+                    "Strong UI/UX design skills",
+                    "Ability to optimize app performance"
+                ]
+            },
+            {
+                "id": "job-014",
+                "title": "Marketing Specialist",
+                "bannerImage": "https://example.com/banners/marketing.jpg",
+                "location": "Seattle, WA",
+                "salary": "$70,000 - $100,000",
+                "jobType": "Full-time",
+                "description": "Plan and execute marketing campaigns for retail tech solutions.",
+                "requirements": [
+                    "3+ years of marketing experience",
+                    "Proficiency in digital marketing tools",
+                    "Strong content creation skills",
+                    "Experience with SEO and analytics",
+                    "Creative problem-solving abilities"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "name": "LogiChain Solutions",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Logistics_Logo.png",
+        "location": "Miami, FL",
+        "website": "https://www.fedex.com",
+        "industry": "Logistics",
+        "jobs": [
+            {
+                "id": "job-015",
+                "title": "Supply Chain Analyst",
+                "bannerImage": "https://example.com/banners/supply-chain.jpg",
+                "location": "Miami, FL",
+                "salary": "$80,000 - $110,000",
+                "jobType": "Full-time",
+                "description": "Optimize supply chain processes using data-driven insights.",
+                "requirements": [
+                    "Experience in supply chain management",
+                    "Proficiency in data analysis tools",
+                    "Knowledge of logistics software",
+                    "Strong organizational skills",
+                    "Ability to work under pressure"
+                ]
+            },
+            {
+                "id": "job-016",
+                "title": "Software Engineer",
+                "bannerImage": "https://example.com/banners/software-eng.jpg",
+                "location": "Remote",
+                "salary": "$95,000 - $130,000",
+                "jobType": "Full-time",
+                "description": "Develop software for logistics automation.",
+                "requirements": [
+                    "Proficiency in Python or C#",
+                    "Experience with cloud platforms",
+                    "Knowledge of database management",
+                    "Familiarity with Agile development",
+                    "Strong problem-solving skills"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "name": "CyberGuard Technologies",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Cybersecurity_Logo.png",
+        "location": "Washington, DC",
+        "website": "https://www.paloaltonetworks.com",
+        "industry": "Cybersecurity",
+        "jobs": [
+            {
+                "id": "job-017",
+                "title": "Security Analyst",
+                "bannerImage": "https://example.com/banners/security-analyst.jpg",
+                "location": "Washington, DC",
+                "salary": "$90,000 - $120,000",
+                "jobType": "Full-time",
+                "description": "Monitor and mitigate cybersecurity threats.",
+                "requirements": [
+                    "Experience with SIEM tools",
+                    "Knowledge of network security protocols",
+                    "Familiarity with threat intelligence",
+                    "Strong analytical skills",
+                    "Relevant certifications (e.g., CISSP)"
+                ]
+            },
+            {
+                "id": "job-018",
+                "title": "Penetration Tester",
+                "bannerImage": "https://example.com/banners/pen-tester.jpg",
+                "location": "Remote",
+                "salary": "$100,000 - $140,000",
+                "jobType": "Full-time",
+                "description": "Conduct security assessments to identify vulnerabilities.",
+                "requirements": [
+                    "Experience with penetration testing tools",
+                    "Knowledge of ethical hacking techniques",
+                    "Strong understanding of web vulnerabilities",
+                    "Ability to document findings clearly",
+                    "Relevant certifications (e.g., CEH)"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "name": "TravelSync Solutions",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Travel_Tech_Logo.png",
+        "location": "Los Angeles, CA",
+        "website": "https://www.expedia.com",
+        "industry": "Travel Technology",
+        "jobs": [
+            {
+                "id": "job-019",
+                "title": "Full Stack Developer",
+                "bannerImage": "https://example.com/banners/full-stack.jpg",
+                "location": "Remote",
+                "salary": "$110,000 - $150,000",
+                "jobType": "Full-time",
+                "description": "Build end-to-end solutions for travel platforms.",
+                "requirements": [
+                    "Proficiency in JavaScript and Python",
+                    "Experience with frontend and backend frameworks",
+                    "Knowledge of database systems",
+                    "Familiarity with API development",
+                    "Strong problem-solving skills"
+                ]
+            },
+            {
+                "id": "job-020",
+                "title": "Customer Success Manager",
+                "bannerImage": "https://example.com/banners/customer-success.jpg",
+                "location": "Los Angeles, CA",
+                "salary": "$80,000 - $110,000",
+                "jobType": "Full-time",
+                "description": "Support clients in using travel tech solutions effectively.",
+                "requirements": [
+                    "3+ years of customer-facing experience",
+                    "Strong communication skills",
+                    "Knowledge of CRM tools",
+                    "Ability to manage multiple accounts",
+                    "Problem-solving mindset"
+                ]
+            }
+        ]
+    }
+]
