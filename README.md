@@ -15,6 +15,7 @@ If you are developing a production application, we recommend using TypeScript wi
 1)Tailwind-css
 2)DesyUi
 3)React-Router
+4)framer-motion
 
 # b11a9-react-authentication-tamzid1011
 # b11a9-react-authentication-tamzid1011
