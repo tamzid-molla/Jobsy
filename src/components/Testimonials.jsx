@@ -8,8 +8,8 @@ import { motion } from 'framer-motion';
 const Testimonials = () => {
    
     return (
-        <div className="mt-32 mb-20 ">
-             <h2 className=' text-center text-4xl font-bold mb-16'>Our Happy Customers</h2>
+        <div className="mt-32 pb-40 ">
+             <h2 className=' text-center text-4xl font-bold mb-16 mt-10'>Our Happy Customers</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-7 lg:grid-cols-4'>
                 <motion.div
 

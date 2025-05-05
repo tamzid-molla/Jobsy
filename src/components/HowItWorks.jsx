@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 
 const HowItWorks = () => {
     return (
-        <div className='my-20'>
+        <div className='my-20 mb-40'>
             <h2 className='text-center text-3xl font-bold'>Find Jobs in 4 Easy Steps</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
                 <motion.div

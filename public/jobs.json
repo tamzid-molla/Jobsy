@@ -24,6 +24,54 @@
                 ]
             },
             {
+                "id": "job-019",
+                "title": "Senior Backend Developer",
+                "bannerImage": "https://example.com/banners/backend-developer.jpg",
+                "location": "Remote",
+                "salary": "$130,000 - $170,000",
+                "jobType": "Full-time",
+                "description": "Design and implement robust server-side applications using modern technologies.",
+                "requirements": [
+                    "6+ years of experience in backend development",
+                    "Proficiency in Python, Django, and PostgreSQL",
+                    "Strong understanding of microservices architecture",
+                    "Experience with Docker and Kubernetes",
+                    "Excellent problem-solving skills"
+                ]
+            },
+            {
+                "id": "job-020",
+                "title": "Frontend Engineer",
+                "bannerImage": "https://example.com/banners/frontend-engineer.jpg",
+                "location": "Remote",
+                "salary": "$110,000 - $150,000",
+                "jobType": "Full-time",
+                "description": "Build responsive and intuitive user interfaces for web applications.",
+                "requirements": [
+                    "4+ years of experience in frontend development",
+                    "Expertise in JavaScript, TypeScript, and Vue.js",
+                    "Familiarity with state management libraries (Redux, Vuex)",
+                    "Experience with Webpack and Vite",
+                    "Strong attention to detail"
+                ]
+            },
+            {
+                "id": "job-021",
+                "title": "Cloud Architect",
+                "bannerImage": "https://example.com/banners/cloud-architect.jpg",
+                "location": "Remote",
+                "salary": "$140,000 - $180,000",
+                "jobType": "Full-time",
+                "description": "Design and optimize cloud infrastructure for high availability and scalability.",
+                "requirements": [
+                    "7+ years of experience in cloud architecture",
+                    "Expertise in AWS, GCP, or Azure",
+                    "Strong knowledge of Infrastructure as Code (Terraform, CloudFormation)",
+                    "Experience with serverless computing",
+                    "Excellent leadership skills"
+                ]
+            },
+            {
                 "id": "job-002",
                 "title": "Product Manager",
                 "bannerImage": "https://example.com/banners/product-manager.jpg",
@@ -150,6 +198,38 @@
                 ]
             },
             {
+                "id": "job-022",
+                "title": "DevOps Engineer",
+                "bannerImage": "https://example.com/banners/devops-engineer.jpg",
+                "location": "Remote",
+                "salary": "$125,000 - $165,000",
+                "jobType": "Full-time",
+                "description": "Automate and streamline deployment processes for reliable software delivery.",
+                "requirements": [
+                    "5+ years of experience in DevOps or SRE roles",
+                    "Proficiency in CI/CD tools (Jenkins, GitLab CI)",
+                    "Strong knowledge of containerization (Docker, Kubernetes)",
+                    "Experience with monitoring tools (Prometheus, Grafana)",
+                    "Strong collaboration skills"
+                ]
+            },
+            {
+                "id": "job-023",
+                "title": "Full Stack Developer",
+                "bannerImage": "https://example.com/banners/fullstack-developer.jpg",
+                "location": "Remote",
+                "salary": "$115,000 - $155,000",
+                "jobType": "Full-time",
+                "description": "Develop end-to-end solutions for web applications with a focus on performance.",
+                "requirements": [
+                    "5+ years of experience in full stack development",
+                    "Expertise in Node.js, Express, and Angular",
+                    "Strong knowledge of MongoDB and SQL databases",
+                    "Experience with RESTful APIs and GraphQL",
+                    "Excellent debugging skills"
+                ]
+            },
+            {
                 "id": "job-008",
                 "title": "Frontend Developer",
                 "bannerImage": "https://example.com/banners/frontend-dev.jpg",
@@ -176,7 +256,7 @@
         "industry": "Financial Technology",
         "jobs": [
             {
-                "id": "job-009",
+                "id": "job-024",
                 "title": "Backend Developer",
                 "bannerImage": "https://example.com/banners/backend-dev.jpg",
                 "location": "Remote",
@@ -192,7 +272,7 @@
                 ]
             },
             {
-                "id": "job-010",
+                "id": "job-025",
                 "title": "Compliance Analyst",
                 "bannerImage": "https://example.com/banners/compliance.jpg",
                 "location": "Chicago, IL",
@@ -218,7 +298,7 @@
         "industry": "Agriculture Technology",
         "jobs": [
             {
-                "id": "job-011",
+                "id": "job-026",
                 "title": "IoT Engineer",
                 "bannerImage": "https://example.com/banners/iot-engineer.jpg",
                 "location": "Des Moines, IA",
@@ -234,7 +314,7 @@
                 ]
             },
             {
-                "id": "job-012",
+                "id": "job-027",
                 "title": "Agronomist",
                 "bannerImage": "https://example.com/banners/agronomist.jpg",
                 "location": "Remote",
@@ -260,7 +340,7 @@
         "industry": "Retail Technology",
         "jobs": [
             {
-                "id": "job-013",
+                "id": "job-028",
                 "title": "Mobile App Developer",
                 "bannerImage": "https://example.com/banners/mobile-dev.jpg",
                 "location": "Remote",
@@ -276,7 +356,87 @@
                 ]
             },
             {
-                "id": "job-014",
+                "id": "job-029",
+                "title": "Machine Learning Engineer",
+                "bannerImage": "https://example.com/banners/ml-engineer.jpg",
+                "location": "Remote",
+                "salary": "$135,000 - $175,000",
+                "jobType": "Full-time",
+                "description": "Build and deploy machine learning models for predictive analytics.",
+                "requirements": [
+                    "6+ years of experience in machine learning",
+                    "Proficiency in Python, TensorFlow, and PyTorch",
+                    "Strong knowledge of data pipelines and ETL processes",
+                    "Experience with cloud-based ML platforms",
+                    "Excellent analytical skills"
+                ]
+            },
+            {
+                "id": "job-030",
+                "title": "Mobile App Developer",
+                "bannerImage": "https://example.com/banners/mobile-developer.jpg",
+                "location": "Remote",
+                "salary": "$110,000 - $145,000",
+                "jobType": "Full-time",
+                "description": "Create high-performance mobile applications for iOS and Android.",
+                "requirements": [
+                    "4+ years of experience in mobile development",
+                    "Expertise in Swift, Kotlin, and Flutter",
+                    "Strong knowledge of mobile UI/UX principles",
+                    "Experience with app store deployments",
+                    "Strong teamwork skills"
+                ]
+            },
+            {
+                "id": "job-031",
+                "title": "Security Engineer",
+                "bannerImage": "https://example.com/banners/security-engineer.jpg",
+                "location": "Remote",
+                "salary": "$130,000 - $170,000",
+                "jobType": "Full-time",
+                "description": "Implement and maintain security protocols to protect systems and data.",
+                "requirements": [
+                    "5+ years of experience in cybersecurity",
+                    "Proficiency in penetration testing and vulnerability assessments",
+                    "Strong knowledge of firewalls and encryption protocols",
+                    "Experience with compliance frameworks (GDPR, SOC 2)",
+                    "Excellent risk assessment skills"
+                ]
+            },
+            {
+                "id": "job-017",
+                "title": "Data Engineer",
+                "bannerImage": "https://example.com/banners/data-engineer.jpg",
+                "location": "Remote",
+                "salary": "$120,000 - $160,000",
+                "jobType": "Full-time",
+                "description": "Design and maintain data pipelines for large-scale data processing.",
+                "requirements": [
+                    "5+ years of experience in data engineering",
+                    "Expertise in Python, Spark, and Hadoop",
+                    "Strong knowledge of data warehousing (Snowflake, Redshift)",
+                    "Experience with streaming data (Kafka, Flink)",
+                    "Excellent optimization skills"
+                ]
+            },
+            {
+                "id": "job-018",
+                "title": "Site Reliability Engineer",
+                "bannerImage": "https://example.com/banners/sre-engineer.jpg",
+                "location": "Remote",
+                "salary": "$125,000 - $165,000",
+                "jobType": "Full-time",
+                "description": "Ensure system reliability and performance through automation and monitoring.",
+                "requirements": [
+                    "6+ years of experience in site reliability engineering",
+                    "Proficiency in scripting (Python, Bash)",
+                    "Strong knowledge of observability tools (Datadog, New Relic)",
+                    "Experience with incident response and SLAs",
+                    "Excellent communication skills"
+                ]
+            },
+            {
+                "id": "job-032",
                 "title": "Marketing Specialist",
                 "bannerImage": "https://example.com/banners/marketing.jpg",
                 "location": "Seattle, WA",
@@ -295,14 +455,14 @@
     },
     {
         "id": "8",
-        "name": "LogiChain Solutions",
+        "name": "DockYard",
         "logo": "https://i.ibb.co.com/Kj7HRPQL/1.webp",
         "location": "Miami, FL",
         "website": "https://www.fedex.com",
         "industry": "Logistics",
         "jobs": [
             {
-                "id": "job-015",
+                "id": "job-033",
                 "title": "Supply Chain Analyst",
                 "bannerImage": "https://example.com/banners/supply-chain.jpg",
                 "location": "Miami, FL",
@@ -314,11 +474,11 @@
                     "Proficiency in data analysis tools",
                     "Knowledge of logistics software",
                     "Strong organizational skills",
-                    "Ability to work under pressure"
+                    "Ability to terminate under pressure"
                 ]
             },
             {
-                "id": "job-016",
+                "id": "job-034",
                 "title": "Software Engineer",
                 "bannerImage": "https://example.com/banners/software-eng.jpg",
                 "location": "Remote",
@@ -335,9 +495,7 @@
             }
         ]
     }
-    
 ]
-
 
 
 
