@@ -14,16 +14,16 @@ const Nav = () => {
   const links = (
     <>
       <li className="flex">
-        <NavLink className="flex items-center text-lg px-4 ">Link</NavLink>
+        <NavLink to="/" className="flex items-center text-lg px-4 ">Home</NavLink>
       </li>
       <li className="flex">
-        <NavLink className="flex items-center text-lg px-4 ">Link</NavLink>
+        <NavLink to="/about" className="flex items-center text-lg px-4 ">About</NavLink>
       </li>
       <li className="flex">
-        <NavLink className="flex items-center text-lg px-4 ">Link</NavLink>
+        <NavLink to="/terms" className="flex items-center text-lg px-4 ">Terms</NavLink>
       </li>
       <li className="flex">
-        <NavLink className="flex items-center text-lg px-4 ">Link</NavLink>
+        <NavLink to="/Blogs" className="flex items-center text-lg px-4 ">Blogs</NavLink>
       </li>
     </>
   );
@@ -39,12 +39,14 @@ const Nav = () => {
         <div className="flex gap-16">
           <ul className="items-stretch hidden space-x-3 lg:flex">{links}</ul>
           <div className="items-center gap-12 flex-shrink-0 hidden lg:flex">
-            <button className="btn btn-primary self-center px-8 py-3 rounded">
+            <Link to="/register"> <button className="btn btn-primary self-center px-8 py-3 rounded">
               Sign up
-            </button>
+            </button> </Link>
+            <Link to="/login">
             <button className="btn btn-primary self-center px-8 py-3 rounded">
             Sign in
             </button>
+            </Link>
           </div>
           <div className="flex gap-5">
             <button>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '../components/Banner';
 import HowItWorks from '../components/HowItWorks';
 import Companies from '../components/Companies';
@@ -6,6 +6,9 @@ import Testimonials from '../components/Testimonials';
 import CompaniesRegister from '../components/CompaniesRegister';
 
 const HomePage = () => {
+    useEffect(() => {
+        document.title = "home"; 
+    },[])
     return (
         <div className='w-11/12 mx-auto'>
             <Banner></Banner>
