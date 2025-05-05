@@ -20,3 +20,10 @@ ul li a.active{
   text-decoration: underline;
   font-weight: bold;
 }
+
+.particles canvas {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

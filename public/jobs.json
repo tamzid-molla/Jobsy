@@ -2,7 +2,7 @@
     {
         "id": "1",
         "name": "TechTrend Innovations",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/0/09/Tech_Company_Logo.png",
+        "logo": "https://i.ibb.co.com/d0RHFJLj/8.jpg",
         "location": "San Francisco, CA",
         "website": "https://www.salesforce.com",
         "industry": "Technology",
@@ -44,7 +44,7 @@
     {
         "id": "2",
         "name": "GreenWave Solutions",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Renewable_Energy_Logo.png",
+        "logo": "https://i.ibb.co.com/99FF5g0s/7.jpg",
         "location": "Austin, TX",
         "website": "https://www.tesla.com",
         "industry": "Renewable Energy",
@@ -86,7 +86,7 @@
     {
         "id": "3",
         "name": "HealthSync Technologies",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Healthcare_Logo.png",
+        "logo": "https://i.ibb.co.com/ZRTP3JWS/6.webp",
         "location": "Boston, MA",
         "website": "https://www.epic.com",
         "industry": "Healthcare",
@@ -128,7 +128,7 @@
     {
         "id": "4",
         "name": "EduFuture Systems",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Education_Tech_Logo.png",
+        "logo": "https://i.ibb.co.com/zV8M7NBn/5.webp",
         "location": "New York, NY",
         "website": "https://www.coursera.org",
         "industry": "Education Technology",
@@ -170,7 +170,7 @@
     {
         "id": "5",
         "name": "FinCore Solutions",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Fintech_Logo.png",
+        "logo": "https://i.ibb.co.com/7NbkQcPL/4.webp",
         "location": "Chicago, IL",
         "website": "https://www.stripe.com",
         "industry": "Financial Technology",
@@ -212,7 +212,7 @@
     {
         "id": "6",
         "name": "AgriTech Ventures",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Agtech_Logo.png",
+        "logo": "https://i.ibb.co.com/zHWHKdMc/3.jpg",
         "location": "Des Moines, IA",
         "website": "https://www.johndeere.com",
         "industry": "Agriculture Technology",
@@ -254,7 +254,7 @@
     {
         "id": "7",
         "name": "RetailFlow Systems",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Retail_Tech_Logo.png",
+        "logo": "https://i.ibb.co.com/gM3ssWFm/2.webp",
         "location": "Seattle, WA",
         "website": "https://www.amazon.com",
         "industry": "Retail Technology",
@@ -296,7 +296,7 @@
     {
         "id": "8",
         "name": "LogiChain Solutions",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Logistics_Logo.png",
+        "logo": "https://i.ibb.co.com/Kj7HRPQL/1.webp",
         "location": "Miami, FL",
         "website": "https://www.fedex.com",
         "industry": "Logistics",
@@ -334,89 +334,13 @@
                 ]
             }
         ]
-    },
-    {
-        "id": "9",
-        "name": "CyberGuard Technologies",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Cybersecurity_Logo.png",
-        "location": "Washington, DC",
-        "website": "https://www.paloaltonetworks.com",
-        "industry": "Cybersecurity",
-        "jobs": [
-            {
-                "id": "job-017",
-                "title": "Security Analyst",
-                "bannerImage": "https://example.com/banners/security-analyst.jpg",
-                "location": "Washington, DC",
-                "salary": "$90,000 - $120,000",
-                "jobType": "Full-time",
-                "description": "Monitor and mitigate cybersecurity threats.",
-                "requirements": [
-                    "Experience with SIEM tools",
-                    "Knowledge of network security protocols",
-                    "Familiarity with threat intelligence",
-                    "Strong analytical skills",
-                    "Relevant certifications (e.g., CISSP)"
-                ]
-            },
-            {
-                "id": "job-018",
-                "title": "Penetration Tester",
-                "bannerImage": "https://example.com/banners/pen-tester.jpg",
-                "location": "Remote",
-                "salary": "$100,000 - $140,000",
-                "jobType": "Full-time",
-                "description": "Conduct security assessments to identify vulnerabilities.",
-                "requirements": [
-                    "Experience with penetration testing tools",
-                    "Knowledge of ethical hacking techniques",
-                    "Strong understanding of web vulnerabilities",
-                    "Ability to document findings clearly",
-                    "Relevant certifications (e.g., CEH)"
-                ]
-            }
-        ]
-    },
-    {
-        "id": "10",
-        "name": "TravelSync Solutions",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Travel_Tech_Logo.png",
-        "location": "Los Angeles, CA",
-        "website": "https://www.expedia.com",
-        "industry": "Travel Technology",
-        "jobs": [
-            {
-                "id": "job-019",
-                "title": "Full Stack Developer",
-                "bannerImage": "https://example.com/banners/full-stack.jpg",
-                "location": "Remote",
-                "salary": "$110,000 - $150,000",
-                "jobType": "Full-time",
-                "description": "Build end-to-end solutions for travel platforms.",
-                "requirements": [
-                    "Proficiency in JavaScript and Python",
-                    "Experience with frontend and backend frameworks",
-                    "Knowledge of database systems",
-                    "Familiarity with API development",
-                    "Strong problem-solving skills"
-                ]
-            },
-            {
-                "id": "job-020",
-                "title": "Customer Success Manager",
-                "bannerImage": "https://example.com/banners/customer-success.jpg",
-                "location": "Los Angeles, CA",
-                "salary": "$80,000 - $110,000",
-                "jobType": "Full-time",
-                "description": "Support clients in using travel tech solutions effectively.",
-                "requirements": [
-                    "3+ years of customer-facing experience",
-                    "Strong communication skills",
-                    "Knowledge of CRM tools",
-                    "Ability to manage multiple accounts",
-                    "Problem-solving mindset"
-                ]
-            }
-        ]
     }
+    
 ]
+
+
+
+
+
+
+
