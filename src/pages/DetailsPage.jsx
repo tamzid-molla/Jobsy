@@ -12,8 +12,8 @@ const DetailsPage = () => {
 
     useEffect(() => {
         document.title = `details/${id}`; 
-        const finder = data.filter(find => parseInt(find.id)===parseInt(id));
-        setCompany(finder[0] || {});
+        const finder = data.find(find => parseInt(find.id)===parseInt(id));
+        setCompany(finder || {});
     }, [id, data])
 
 

@@ -6,6 +6,7 @@ import DetailsPage from '../pages/DetailsPage';
 import About from '../components/About';
 import Terms from '../components/Terms';
 import Blogs from '../components/Blogs';
+import CommingSoon from '../ExtraPage/CommingSoon';
 
 export const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
                 loader:()=>fetch("/jobs.json"),
                 Component: DetailsPage,
                 hydrateFallbackElement: <p>Loading............</p>
+            },
+            {
+                path: "/commingsoon",
+                Component: CommingSoon
             }
         ]
     }

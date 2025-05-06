@@ -39,17 +39,17 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="hover:text-primary transition-colors">
+                <Link to="/commingsoon" className="hover:text-primary transition-colors">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-primary transition-colors">
+                <Link to="/commingsoon" className="hover:text-primary transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="hover:text-primary transition-colors">
+                <Link to="/commingsoon" className="hover:text-primary transition-colors">
                                   FAQ
                 </Link>
                 </li>
@@ -63,22 +63,22 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link to="/blog" className="hover:text-primary transition-colors">
+                <Link to="/blogs" className="hover:text-primary transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/guides" className="hover:text-primary transition-colors">
+                <Link to="/commingsoon" className="hover:text-primary transition-colors">
                   Career Guides
                 </Link>
               </li>
               <li>
-                <Link to="/events" className="hover:text-primary transition-colors">
+                <Link to="/commingsoon" className="hover:text-primary transition-colors">
                   Events
                 </Link>
               </li>
               <li>
-                <Link to="/support" className="hover:text-primary transition-colors">
+                <Link to="/commingsoon" className="hover:text-primary transition-colors">
                   Support
                 </Link>
               </li>
@@ -98,38 +98,34 @@ const Footer = () => {
                 Phone: <a href="tel:+1234567890" className="hover:text-primary">+1 (234) 567-890</a>
               </p>
               <div className="flex gap-4">
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="https://facebook.com"
+                  target="blank"
                   className="p-2 bg-primary rounded-full hover:bg-primary-dark transition-colors"
                 >
                   <FaFacebookF size={16} />
-                </a>
-                <a
-                  href="https://twitter.com"
+                </Link>
+                <Link
+                  to="https://twitter.com"
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="p-2 bg-primary rounded-full hover:bg-primary-dark transition-colors"
                 >
                   <FaTwitter size={16} />
-                </a>
-                <a
-                  href="https://linkedin.com"
+                </Link>
+                <Link
+                  to="https://linkedin.com"
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="p-2 bg-primary rounded-full hover:bg-primary-dark transition-colors"
                 >
                   <FaLinkedinIn size={16} />
-                </a>
-                <a
-                  href="https://instagram.com"
+                </Link>
+                <Link
+                  to="https://instagram.com"
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="p-2 bg-primary rounded-full hover:bg-primary-dark transition-colors"
                 >
                   <FaInstagram size={16} />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -141,7 +137,7 @@ const Footer = () => {
             © {new Date().getFullYear()} J0BSY. All rights reserved.
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <Link to="/privacy" className="text-gray-400 hover:text-primary text-sm">
+            <Link to="/commingsoon" className="text-gray-400 hover:text-primary text-sm">
               Privacy Policy
             </Link>
             <Link to="/terms" className="text-gray-400 hover:text-primary text-sm">

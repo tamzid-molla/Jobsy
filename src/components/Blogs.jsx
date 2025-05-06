@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { FaBlog, FaTags, FaEnvelope, FaArrowRight } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
+import TeamCollaborate from "../assets/Team/collaboration.jpg"
+import { Link } from 'react-router';
 
 const Blogs = () => {
   // Animation controls for different sections
@@ -19,6 +21,7 @@ const Blogs = () => {
 
   // Trigger animations when sections come into view
   useEffect(() => {
+    document.title = `blogs`; 
     if (heroInView) heroControls.start({ opacity: 1, y: 0 });
     if (blogsInView) blogsControls.start({ opacity: 1, y: 0 });
     if (categoriesInView) categoriesControls.start({ opacity: 1, y: 0 });
@@ -34,34 +37,34 @@ const Blogs = () => {
     ctaControls,
   ]);
 
-  // Sample blog posts data
+
   const blogPosts = [
     {
       id: 1,
       title: 'Top 5 Tips for Crafting a Winning Resume',
       excerpt: 'Learn how to make your resume stand out with these expert tips on formatting, keywords, and more.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80',
+      image: 'https://i.ibb.co.com/v4zC41kt/blog01.jpg',
       category: 'Career Advice',
     },
     {
       id: 2,
       title: 'The Future of Remote Work in 2025',
       excerpt: 'Explore the trends shaping remote work and how job seekers can adapt to new opportunities.',
-      image: 'https://images.unsplash.com/photo-1598257006458-087b6878a0ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80',
+      image: 'https://i.ibb.co.com/W4BpdYD4/blog1.png',
       category: 'Industry Trends',
     },
     {
       id: 3,
       title: 'How to Ace Your Next Job Interview',
       excerpt: 'From preparation to follow-up, discover strategies to impress hiring managers and land the job.',
-      image: 'https://images.unsplash.com/photo-1516321310764-959200eb3e35?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80',
+      image: 'https://i.ibb.co.com/wNWQCWDL/blog2.jpg',
       category: 'Career Advice',
     },
     {
       id: 4,
       title: 'Navigating Career Changes with Confidence',
       excerpt: 'Transitioning to a new industry? Here’s how to leverage your skills and embrace change.',
-      image: 'https://images.unsplash.com/photo-1553877522-43269d8ea9f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80',
+      image: 'https://i.ibb.co.com/p6YNW44L/blog3.webp',
       category: 'Career Growth',
     },
   ];
@@ -78,16 +81,16 @@ const Blogs = () => {
     : blogPosts.filter(blog => blog.category === selectedCategory);
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 ">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-24">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
+        <div className="w-11/12 mx-auto overflow-hidden flex flex-col-reverse lg:flex-row items-center">
           <motion.div
             ref={heroRef}
             initial={{ opacity: 0, x: -50 }}
             animate={heroControls}
             transition={{ duration: 0.8 }}
-            className="md:w-1/2 mb-8 md:mb-0"
+            className="lg:w-5/12 lg:ml-32 ml-28 w-10/12"
           >
             <h1 className="text-5xl font-bold mb-6 leading-tight">
               JobFinder Blog
@@ -95,23 +98,23 @@ const Blogs = () => {
             <p className="text-lg mb-6 max-w-lg">
               Stay informed with the latest career advice, industry trends, and job search tips. Our blog is your go-to resource for navigating the ever-changing world of work.
             </p>
-            <a
-              href="#blogs"
+            <Link
+              to="/blogs"
               className="inline-block bg-white text-blue-600 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition"
             >
               Explore Blogs
-            </a>
+            </Link>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={heroControls}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:w-1/2"
+            className="lg:w-5/12 lg:mx-auto mr-28 w-10/12 mb-10 lg:mb-0"
           >
             <img
-              src="https://images.unsplash.com/photo-1516321310764-959200eb3e35?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
+              src={TeamCollaborate}
               alt="Team collaborating"
-              className="rounded-xl shadow-2xl"
+              className="rounded-xl mx-auto shadow-2xl"
             />
           </motion.div>
         </div>
@@ -147,12 +150,12 @@ const Blogs = () => {
                   <span className="text-sm text-blue-500 font-semibold">{blog.category}</span>
                   <h3 className="text-xl font-semibold text-gray-800 mt-2 mb-3">{blog.title}</h3>
                   <p className="text-gray-600 mb-4">{blog.excerpt}</p>
-                  <a
-                    href={`/blog/${blog.id}`}
+                  <Link
+                    to="/commingsoon"
                     className="inline-flex items-center text-blue-500 font-semibold hover:underline"
                   >
                     Read More <FaArrowRight className="ml-2" />
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -243,7 +246,7 @@ const Blogs = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="py-3 px-4 rounded-l-lg text-gray-800 flex-grow focus:outline-none"
+                className="py-3 px-4 rounded-l-lg text-white flex-grow focus:outline-none"
               />
               <button className="bg-white text-blue-600 py-3 px-6 rounded-r-lg font-semibold hover:bg-gray-100 transition flex items-center">
                 Subscribe <FaEnvelope className="ml-2" />

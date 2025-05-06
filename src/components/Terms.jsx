@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { FaFileContract, FaUserCheck, FaShieldAlt, FaLock, FaExclamationTriangle } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router';
 
 const Terms = () => {
   // Animation controls for different sections
@@ -21,6 +22,7 @@ const Terms = () => {
 
   // Trigger animations when sections come into view
   useEffect(() => {
+    document.title = `terms`; 
     if (introInView) introControls.start({ opacity: 1, y: 0 });
     if (responsibilitiesInView) responsibilitiesControls.start({ opacity: 1, y: 0 });
     if (usageInView) usageControls.start({ opacity: 1, y: 0 });
@@ -54,14 +56,14 @@ const Terms = () => {
             <FaFileContract className="text-6xl mx-auto mb-6" />
             <h1 className="text-5xl font-bold mb-6">Terms of Service</h1>
             <p className="text-lg max-w-3xl mx-auto mb-8">
-              Welcome to JobFinder! These Terms of Service govern your use of our platform, including our website, mobile apps, and related services. By accessing or using JobFinder, you agree to comply with these terms. Please read them carefully.
+              Welcome to JOBSY! These Terms of Service govern your use of our platform, including our website, mobile apps, and related services. By accessing or using JOBSY, you agree to comply with these terms. Please read them carefully.
             </p>
-            <a
-              href="/contact"
+            <Link
+              to="/commingsoon"
               className="inline-block bg-white text-blue-600 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition"
             >
               Contact Us
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -100,7 +102,7 @@ const Terms = () => {
               <FaShieldAlt className="text-4xl text-blue-500 mb-4" />
               <h3 className="text-2xl font-semibold text-gray-800 mb-3">Lawful Use</h3>
               <p className="text-gray-600">
-                You must use JobFinder in compliance with all applicable laws and regulations. Any unlawful activities, including harassment, fraud, or posting illegal content, will result in account termination.
+                You must use JOBSY in compliance with all applicable laws and regulations. Any unlawful activities, including harassment, fraud, or posting illegal content, will result in account termination.
               </p>
             </motion.div>
           </div>
@@ -128,7 +130,7 @@ const Terms = () => {
             >
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Account Management</h3>
               <p className="text-gray-600">
-                You are responsible for maintaining the confidentiality of your account credentials. Notify us immediately of any unauthorized access or security breaches. JobFinder is not liable for losses resulting from unauthorized use.
+                You are responsible for maintaining the confidentiality of your account credentials. Notify us immediately of any unauthorized access or security breaches. JOBSY is not liable for losses resulting from unauthorized use.
               </p>
             </motion.div>
             <motion.div
@@ -139,7 +141,7 @@ const Terms = () => {
             >
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Job Applications</h3>
               <p className="text-gray-600">
-                JobFinder facilitates connections between job seekers and employers. We do not guarantee job offers or employment outcomes. All applications are subject to the employer’s hiring processes.
+                JOBSY facilitates connections between job seekers and employers. We do not guarantee job offers or employment outcomes. All applications are subject to the employer’s hiring processes.
               </p>
             </motion.div>
             <motion.div
@@ -150,7 +152,7 @@ const Terms = () => {
             >
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Content Ownership</h3>
               <p className="text-gray-600">
-                Any content you upload, such as resumes or profile information, remains your property. By uploading, you grant JobFinder a non-exclusive, worldwide license to display and share this content with potential employers.
+                Any content you upload, such as resumes or profile information, remains your property. By uploading, you grant JOBSY a non-exclusive, worldwide license to display and share this content with potential employers.
               </p>
             </motion.div>
           </div>
@@ -178,14 +180,14 @@ const Terms = () => {
             <FaLock className="text-5xl text-blue-500 mx-auto mb-4" />
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Data Protection</h3>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              We are committed to protecting your personal information. Our Privacy Policy outlines how we collect, use, and safeguard your data. By using JobFinder, you consent to our data practices as described in the Privacy Policy.
+              We are committed to protecting your personal information. Our Privacy Policy outlines how we collect, use, and safeguard your data. By using JOBSY, you consent to our data practices as described in the Privacy Policy.
             </p>
-            <a
-              href="/privacy"
+            <Link
+              to="/commingsoon"
               className="inline-block mt-6 text-blue-500 font-semibold hover:underline"
             >
               Read Our Privacy Policy
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -212,7 +214,7 @@ const Terms = () => {
               <FaExclamationTriangle className="text-4xl mb-4" />
               <h3 className="text-2xl font-semibold mb-3">No Warranty</h3>
               <p>
-                JobFinder is provided “as is” without warranties of any kind. We do not guarantee the accuracy, completeness, or reliability of job listings or employer information.
+                JOBSY is provided “as is” without warranties of any kind. We do not guarantee the accuracy, completeness, or reliability of job listings or employer information.
               </p>
             </motion.div>
             <motion.div
@@ -224,7 +226,7 @@ const Terms = () => {
               <FaExclamationTriangle className="text-4xl mb-4" />
               <h3 className="text-2xl font-semibold mb-3">Limitation of Liability</h3>
               <p>
-                JobFinder is not liable for any damages arising from your use of the platform, including but not limited to loss of employment opportunities or data breaches caused by third parties.
+                JOBSY is not liable for any damages arising from your use of the platform, including but not limited to loss of employment opportunities or data breaches caused by third parties.
               </p>
             </motion.div>
           </div>
