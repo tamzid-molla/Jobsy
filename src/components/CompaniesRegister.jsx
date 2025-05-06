@@ -2,6 +2,7 @@ import React, { use, useEffect, useState } from 'react';
 import { CompaniesDataContext } from '../companiesContext/CompaniesContext';
 import { CiLocationOn } from "react-icons/ci";
 import { motion } from 'framer-motion';
+import { Link } from 'react-router';
 
 
 const CompaniesRegister = () => {
@@ -31,7 +32,9 @@ const CompaniesRegister = () => {
                     <div className="">
                         <h4 className='text-center text-2xl font-bold text-primary'>{job.name}</h4>
                         <p className='flex items-center justify-center my-4 gap-2 text-lg text-gray-600'> <CiLocationOn></CiLocationOn> {job.location}</p>
-                        <button className='w-full btn bg-white text-primary mt-8 rounded-lg py-6 hover:text-white hover:bg-primary text-xl font-semibold'>{job.jobs.length } Open Position</button>
+                        <Link to={`/details/${job.id}`}>
+                            <button className='w-full btn bg-white text-primary mt-8 rounded-lg py-6 hover:text-white hover:bg-primary text-xl font-semibold'>{job.jobs.length} Open Position</button>
+                            </Link>
                     </div>
                </div>
            </div> )}

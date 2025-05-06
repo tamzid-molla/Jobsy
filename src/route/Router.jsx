@@ -29,8 +29,10 @@ export const router = createBrowserRouter([
                 Component: Blogs
             },
             {
-                path: "/details",
-                Component: DetailsPage
+                path: "/details/:id",
+                loader:()=>fetch("/jobs.json"),
+                Component: DetailsPage,
+                hydrateFallbackElement: <p>Loading............</p>
             }
         ]
     }
