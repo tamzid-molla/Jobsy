@@ -7,6 +7,9 @@ import About from '../components/About';
 import Terms from '../components/Terms';
 import Blogs from '../components/Blogs';
 import CommingSoon from '../ExtraPage/CommingSoon';
+import Login from '../components/Login';
+import Register from '../components/Register';
+import PrivateRoute from '../AuthContext/PrivateRoute';
 
 export const router = createBrowserRouter([
     {
@@ -32,12 +35,22 @@ export const router = createBrowserRouter([
             {
                 path: "/details/:id",
                 loader:()=>fetch("/jobs.json"),
-                Component: DetailsPage,
+                element: <PrivateRoute>
+                    <DetailsPage></DetailsPage>
+                </PrivateRoute>,
                 hydrateFallbackElement: <p>Loading............</p>
             },
             {
                 path: "/commingsoon",
                 Component: CommingSoon
+            },
+            {
+                path: "/login",
+                Component: Login
+            },
+            {
+                path: "/register",
+                Component: Register
             }
         ]
     }

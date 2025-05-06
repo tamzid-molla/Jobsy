@@ -1,15 +1,31 @@
-import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router";
+import React, { useContext, useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router";
 import logo from "../assets/logo.png";
 import { CgProfile } from "react-icons/cg";
+import { AuthContext } from "../AuthContext/GoogleContext";
+import { signOut } from "firebase/auth";
+import { auth } from "../FireBase/Firebase_init";
+import { toast } from "react-toastify";
 
 const Nav = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  const handleLogOut = () => {
+    signOut(auth).then(() => {
+      toast.success("LogOut Successfully");
+      navigate("/")
+    }).catch(error => {
+      toast.warn(`Opp !!${error.message}, tray again`);
+    })
+  };
+
 
   const links = (
     <>
@@ -40,18 +56,29 @@ const Nav = () => {
           <ul className="items-stretch hidden space-x-3 lg:flex">{links}</ul>
           <div className="items-center gap-12 flex-shrink-0 hidden lg:flex">
             <Link to="/register"> <button className="btn btn-primary self-center px-8 py-3 rounded">
-              Sign up
+              Register
             </button> </Link>
-            <Link to="/login">
+            {
+              user ? <button onClick={()=>{handleLogOut()}} className="btn btn-primary self-center px-8 py-3 rounded">
+              Logout
+              </button>
+                :
+                <Link to="/login">
             <button className="btn btn-primary self-center px-8 py-3 rounded">
-            Sign in
+                Login
             </button>
             </Link>
+}
+
           </div>
           <div className="flex gap-5">
-            <button>
-              <CgProfile size={30} />
+            {
+              user?.photoURL ? <img src={user.photoURL} className="cursor-pointer" alt="" />
+                : <button>
+              <CgProfile size={30} className="cursor-pointer" />
             </button>
+            }
+            
             <button onClick={toggleSidebar} className=" lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

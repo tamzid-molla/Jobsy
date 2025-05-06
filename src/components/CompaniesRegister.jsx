@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { CompaniesDataContext } from '../companiesContext/CompaniesContext';
 import { CiLocationOn } from "react-icons/ci";
 import { motion } from 'framer-motion';
@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 
 
 const CompaniesRegister = () => {
-    const { companies } = use(CompaniesDataContext);
+    const { companies } = useContext(CompaniesDataContext);
     const [jobs, setJobs] = useState([]);
     useEffect(() => {
         const filteringCompany = companies.filter(company => (company.jobs.length > 2))

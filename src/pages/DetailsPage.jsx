@@ -26,7 +26,7 @@ const DetailsPage = () => {
         setIsModalOpen(false);
         setSelectedJob(null);
     };
-   console.log(company.name);
+    
     return (
         <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
             {/* Company Details Section */}

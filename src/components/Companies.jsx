@@ -1,9 +1,9 @@
-import React, { use, useEffect,  } from 'react';
+import React, { useContext, useEffect,  } from 'react';
 import Company from './Company';
 import { CompaniesDataContext } from '../companiesContext/CompaniesContext';
 
 const Companies = () => {
-    const { companies, setCompanies } = use(CompaniesDataContext);
+    const { companies, setCompanies } = useContext(CompaniesDataContext);
 
     useEffect(() => {
         fetch("/jobs.json").then(res => res.json()).then(data => setCompanies(data));
