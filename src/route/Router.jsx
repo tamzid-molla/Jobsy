@@ -12,6 +12,7 @@ import Register from '../components/Register';
 import PrivateRoute from '../AuthContext/PrivateRoute';
 import ErrorPage from '../pages/ErrorPage';
 import ForgotPassword from '../pages/ForgotPassword';
+import ProfilePage from '../pages/ProfilePage';
 
 export const router = createBrowserRouter([
     {
@@ -57,6 +58,10 @@ export const router = createBrowserRouter([
             {
                 path: "/resetPass",
                 Component: ForgotPassword
+            },
+            {
+                path: "/profile",
+                Component: ProfilePage
             },
             {
                 path: "*",

@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand Section */}
+          
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Link to="/" className="flex items-center">
@@ -27,7 +27,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+          
           <div>
             <h3 className="text-lg cached font-semibold mb-4 border-b-2 border-primary w-fit pb-1">
               Quick Links
@@ -56,7 +56,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
+         
           <div>
             <h3 className="text-lg font-semibold mb-4 border-b-2 border-primary w-fit pb-1">
               Resources
@@ -85,7 +85,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact & Social */}
+        
           <div>
             <h3 className="text-lg font-semibold mb-4 border-b-2 border-primary w-fit pb-1">
               Connect With Us
@@ -131,7 +131,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+     
         <div className="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} J0BSY. All rights reserved.

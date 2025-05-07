@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router';
 import { FaMapMarkerAlt, FaGlobe, FaIndustry, FaTimes } from 'react-icons/fa';
 import { Dialog, Transition,TransitionChild,DialogTitle  } from '@headlessui/react';
 
+
 const DetailsPage = () => {
     const [company, setCompany] = useState({});
     const [selectedJob, setSelectedJob] = useState(null);
@@ -11,11 +12,13 @@ const DetailsPage = () => {
     const data = useLoaderData();
 
     useEffect(() => {
-        document.title = `details/${id}`; 
         const finder = data.find(find => parseInt(find.id)===parseInt(id));
         setCompany(finder || {});
     }, [id, data])
 
+    useEffect(() => {
+        document.title= "Company Details | JOB S Y "
+      },[])
 
     const openModal = (job) => {
         setSelectedJob(job);
@@ -29,7 +32,7 @@ const DetailsPage = () => {
     
     return (
         <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-            {/* Company Details Section */}
+          
             {company ? <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden mb-8">
                     <div className="p-6">
                         <div className="flex items-center mb-6">
@@ -68,7 +71,7 @@ const DetailsPage = () => {
                 </div>:""
             }
 
-            {/* Jobs List Section */}
+          
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-6">Available Jobs</h2>
                 <div className="space-y-4">
@@ -97,7 +100,7 @@ const DetailsPage = () => {
                 </div>
             </div>
 
-            {/* Job Details Modal */}
+         
             <Transition appear show={isModalOpen} as={React.Fragment}>
                 <Dialog as="div" className="relative z-50" onClose={closeModal}>
                     <TransitionChild

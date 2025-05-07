@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router';
 import { AuthContext } from '../AuthContext/GoogleContext';
 
+
 const ForgotPassword = () => {
   const location = useLocation();
   const [email, setEmail] = useState('');
     const { resetPassword } = React.useContext(AuthContext);
     
-    useEffect(() => {
-        document.title ="forget password"
-    },[])
-
+useEffect(() => {
+    document.title= "Reset Password | JOB S Y "
+  },[])
 
   useEffect(() => {
     if (location.state?.email) {
@@ -26,7 +26,7 @@ const ForgotPassword = () => {
         window.open('https://mail.google.com', '_blank');
       })
       .catch((error) => {
-        console.error('Reset password error:', error);
+        alert('Reset password error:', error);
       });
   };
 

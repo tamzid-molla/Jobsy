@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+
 import { Link } from 'react-router';
+import PageTitle from '../components/PageTitle';
 
 const ErrorPage = () => {
-    useEffect(() => {
-        document.title = `Error 404`; 
-    },[])
+    
     return (
-        <div>
+      <div>
+        <PageTitle title={"404 Error"} ></PageTitle>
             <div className="pb-20">
       <div className="flex pb-10 flex-col items-center justify-center text-center min-h-[70vh] py-10 bg-white rounded-2xl">
         <img

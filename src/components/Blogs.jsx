@@ -1,27 +1,26 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { FaBlog, FaTags, FaEnvelope, FaArrowRight } from 'react-icons/fa';
+import { FaTags, FaEnvelope, FaArrowRight } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 import TeamCollaborate from "../assets/Team/collaboration.jpg"
 import { Link } from 'react-router';
+import PageTitle from './PageTitle';
 
 const Blogs = () => {
-  // Animation controls for different sections
+  
   const heroControls = useAnimation();
   const blogsControls = useAnimation();
   const categoriesControls = useAnimation();
   const ctaControls = useAnimation();
 
-  // Intersection observers for each section
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [blogsRef, blogsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [categoriesRef, categoriesInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [ctaRef, ctaInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  // Trigger animations when sections come into view
+  
   useEffect(() => {
-    document.title = `blogs`; 
     if (heroInView) heroControls.start({ opacity: 1, y: 0 });
     if (blogsInView) blogsControls.start({ opacity: 1, y: 0 });
     if (categoriesInView) categoriesControls.start({ opacity: 1, y: 0 });
@@ -69,20 +68,21 @@ const Blogs = () => {
     },
   ];
 
-  // Blog categories
+
   const categories = ['Career Advice', 'Industry Trends', 'Career Growth', 'Job Search Tips', 'Workplace Culture'];
 
-  // State for selected category filter
+
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  // Filter blog posts based on selected category
+  
   const filteredBlogs = selectedCategory === 'All'
     ? blogPosts
     : blogPosts.filter(blog => blog.category === selectedCategory);
 
   return (
     <div className="bg-gray-100 ">
-      {/* Hero Section */}
+      <PageTitle title={"Blogs |JOB S Y"} ></PageTitle>
+     
       <section className="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-24">
         <div className="w-11/12 mx-auto overflow-hidden flex flex-col-reverse lg:flex-row items-center">
           <motion.div
@@ -120,7 +120,7 @@ const Blogs = () => {
         </div>
       </section>
 
-      {/* Blog Posts Section */}
+     
       <section id="blogs" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.h2
@@ -163,7 +163,7 @@ const Blogs = () => {
         </div>
       </section>
 
-      {/* Categories Section */}
+   
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-6">
           <motion.h2
@@ -216,7 +216,7 @@ const Blogs = () => {
         </div>
       </section>
 
-      {/* Call to Action Section */}
+     
       <section className="py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
         <div className="container mx-auto px-6 text-center">
           <motion.h2

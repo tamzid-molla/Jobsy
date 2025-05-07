@@ -2,19 +2,18 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { FaUser, FaEnvelope, FaImage, FaLock, FaGoogle, FaExclamationCircle } from 'react-icons/fa';
 import { AuthContext } from '../AuthContext/GoogleContext';
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup, updateProfile } from 'firebase/auth';
 import { auth } from '../FireBase/Firebase_init';
-import { toast } from 'react-toastify';
+
+
 
 const Register = () => {
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [photoUrl, setPhotoUrl] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const { signInEmailPassword,setUser,user} = useContext(AuthContext);
+  const { signInEmailPassword, setUser, user, setName, setPhotoUrl, photoUrl, name } = useContext(AuthContext);
 
   const uppercase = /[A-Z]/;
   const lowercase = /[a-z]/;
@@ -37,8 +36,16 @@ const Register = () => {
 
     signInEmailPassword(email, password)
       .then(result => {
-        setUser(result.user);
-        navigate(`${location?.state ? location.state : "/"}`);
+        const updateUser =(result.user);
+        updateProfile(auth.currentUser, {
+                displayName: name, photoURL: photoUrl
+        }).then(() => {
+                
+          setUser({ ...updateUser, displayName:name ,photoURL: photoUrl})
+          navigate(`${location?.state ? location.state : "/"}`);
+              }).catch((error) => {
+                setError(error.message)
+              });
     }).catch(error => setError(error.message))
     
   };
@@ -48,7 +55,7 @@ const Register = () => {
     signInWithPopup(auth, provider).then(res => {
           setUser(res.user)
           navigate(`${location?.state? location.state:"/"}`)
-          toast.success("Google SignUp Successfully");
+          
         }).catch(error => {
          setError(error.message)
        })
@@ -63,8 +70,8 @@ const Register = () => {
   }, [error]);
 
   useEffect(() => {
-          document.title = `register`; 
-      },[])
+    document.title= "Register | JOB S Y "
+  },[])
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">

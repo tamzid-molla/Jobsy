@@ -4,9 +4,10 @@ import { FaRocket, FaUsers, FaLightbulb, FaGlobe, FaHistory, FaTrophy } from 're
 import { useInView } from 'react-intersection-observer';
 import jobfinder from "../assets/job-finder.png"
 import { Link } from 'react-router';
+import PageTitle from './PageTitle';
 
 const About = () => {
-  // Animation controls for different sections
+  
   const heroControls = useAnimation();
   const missionControls = useAnimation();
   const teamControls = useAnimation();
@@ -14,7 +15,7 @@ const About = () => {
   const historyControls = useAnimation();
   const achievementsControls = useAnimation();
 
-  // Intersection observers for each section
+ 
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [missionRef, missionInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [teamRef, teamInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -22,9 +23,8 @@ const About = () => {
   const [historyRef, historyInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [achievementsRef, achievementsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  // Trigger animations when sections come into view
-  useEffect(() => {
-    document.title = `about`; 
+  
+  useEffect(() => { 
     if (heroInView) heroControls.start({ opacity: 1, y: 0 });
     if (missionInView) missionControls.start({ opacity: 1, y: 0 });
     if (teamInView) teamControls.start({ opacity: 1, y: 0 });
@@ -46,7 +46,7 @@ const About = () => {
     achievementsControls,
   ]);
 
-  // Team members data
+  
   const teamMembers = [
     {
       
@@ -85,7 +85,7 @@ const About = () => {
     },
   ];
 
-  // Achievements data
+  
   const achievements = [
     { title: '100K+ Users', description: 'Over 100,000 job seekers trust JOBSY for their career journey.' },
     { title: '500+ Companies', description: 'Partnered with top-tier companies across various industries.' },
@@ -95,9 +95,10 @@ const About = () => {
 
   return (
     <div className="bg-gradient-to-br  from-blue-600 to-purple-700 text-white py-24">
-      {/* Hero Section */}
-      <section className="w-11/12 mx-auto pb-20">
-        <div className="px-6 flex flex-col-reverse justify-center lg:justify-around gap-10 lg:flex-row items-center">
+      <PageTitle title={"About | JOB S Y "} ></PageTitle>
+      
+      <section className="w-11/12 mx-auto pb-20 p-2">
+        <div className="px-6 flex flex-col-reverse w-[98%] mx-auto justify-center lg:justify-around gap-10 lg:flex-row items-center">
           <motion.div
             ref={heroRef}
             initial={{ opacity: 0, x: -50 }}
@@ -133,7 +134,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Mission Section */}
+      
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.h2
@@ -192,7 +193,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our History Section */}
+      
       <section className="hidden md:block py-12 md:py-20 bg-gray-100">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.h2
@@ -268,7 +269,7 @@ const About = () => {
       </div>
     </section>
 
-      {/* Our Team Section */}
+      
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.h2
@@ -303,7 +304,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Achievements Section */}
+      
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-6">
           <motion.h2
@@ -333,7 +334,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Vision Section */}
+     
       <section className="py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
         <div className="container mx-auto px-6 text-center">
           <motion.h2

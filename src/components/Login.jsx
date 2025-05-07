@@ -2,9 +2,9 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { FaEnvelope, FaLock, FaGoogle, FaExclamationCircle } from 'react-icons/fa';
 import { AuthContext } from '../AuthContext/GoogleContext';
-import { toast } from 'react-toastify';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '../FireBase/Firebase_init';
+
 
 
 const Login = () => {
@@ -20,7 +20,6 @@ const Login = () => {
     login(email, password).then(res => {
       setUser(res.user)
       navigate(`${location?.state? location.state:"/"}`)
-      toast.success("Login Successfully");
     }).catch(error => setError(error.message))
   };
 
@@ -29,27 +28,26 @@ const Login = () => {
     signInWithPopup(auth, provider).then(res => {
       setUser(res.user)
       navigate(`${location?.state? location.state:"/"}`)
-      toast.success("Google SignUp Successfully");
     }).catch(error => {
      setError(error.message)
    })
   };
 
-  // Clear error message after 5 seconds
+
   useEffect(() => {
     if (error) {
       const timer = setTimeout(() => setError(''), 5000);
       return () => clearTimeout(timer);
     }
   }, [error]);
-    
-    useEffect(() => {
-        document.title ="login"
-    }, [])
+  
+  useEffect(() => {
+      document.title= "Login | JOB S Y "
+    },[])
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      {/* <ToastContainer></ToastContainer> */}
+    
       <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
         <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Login</h2>
 

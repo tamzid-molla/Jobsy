@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router";
 import logo from "../assets/logo.png";
-import { CgProfile } from "react-icons/cg";
 import { AuthContext } from "../AuthContext/GoogleContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../FireBase/Firebase_init";
@@ -9,7 +8,7 @@ import { toast } from "react-toastify";
 
 const Nav = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const { user } = useContext(AuthContext);
+  const { user,isLoading } = useContext(AuthContext);
   const navigate = useNavigate();
 
 
@@ -52,33 +51,31 @@ const Nav = () => {
         </Link>
         <p className="text-3xl font-semibold text-primary">J0B <span className="text-black">S</span> <span className="text-black">Y</span></p>
         </div>
-        <div className="flex gap-16">
+        <div className="flex gap-10 xl:gap-16">
           <ul className="items-stretch hidden space-x-3 lg:flex">{links}</ul>
           <div className="items-center gap-12 flex-shrink-0 hidden lg:flex">
             {
-              user?"": <Link to="/register"> <button className="btn btn-primary self-center px-8 py-3 rounded">
+             !isLoading && !user && (<Link to="/register"> <button className="btn btn-primary self-center px-8 py-3 rounded">
               Register
-            </button> </Link>
+            </button> </Link>)
             }
             {
-              user ? <button onClick={()=>{handleLogOut()}} className="btn btn-primary self-center px-8 py-3 rounded">
+             !isLoading && user ? (<button onClick={()=>{handleLogOut()}} className="btn btn-primary self-center px-8 py-3 rounded">
               Logout
-              </button>
+              </button>)
                 :
-                <Link to="/login">
+                (!isLoading && <Link to="/login">
             <button className="btn btn-primary self-center px-8 py-3 rounded">
                 Login
             </button>
-            </Link>
+            </Link>)
 }
 
           </div>
-          <div className="flex gap-5">
+          <div className="flex gap-5 items-center">
             {
-              user?.photoURL ? <img src={user.photoURL} className="cursor-pointer" alt="" />
-                : <button>
-              <CgProfile size={30} className="cursor-pointer" />
-            </button>
+              !isLoading && user?.photoURL  && <Link to="/profile">  <img src={user.photoURL} className="cursor-pointer w-12 h-12 p-1 bg-primary rounded-full" alt="" /> </Link>
+            
             }
             
             <button onClick={toggleSidebar} className=" lg:hidden">

@@ -4,25 +4,24 @@ import { motion, useAnimation } from 'framer-motion';
 import { FaFileContract, FaUserCheck, FaShieldAlt, FaLock, FaExclamationTriangle } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router';
+import PageTitle from './PageTitle';
 
 const Terms = () => {
-  // Animation controls for different sections
+
   const introControls = useAnimation();
   const responsibilitiesControls = useAnimation();
   const usageControls = useAnimation();
   const privacyControls = useAnimation();
   const disclaimersControls = useAnimation();
 
-  // Intersection observers for each section
+
   const [introRef, introInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [responsibilitiesRef, responsibilitiesInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [usageRef, usageInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [privacyRef, privacyInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [disclaimersRef, disclaimersInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  // Trigger animations when sections come into view
   useEffect(() => {
-    document.title = `terms`; 
     if (introInView) introControls.start({ opacity: 1, y: 0 });
     if (responsibilitiesInView) responsibilitiesControls.start({ opacity: 1, y: 0 });
     if (usageInView) usageControls.start({ opacity: 1, y: 0 });
@@ -43,7 +42,8 @@ const Terms = () => {
 
   return (
     <div className="bg-gray-100">
-      {/* Introduction Section */}
+      <PageTitle title={"Terms | JOB S Y "} ></PageTitle>
+    
       <section className="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-24">
         <div className="container mx-auto px-6">
           <motion.div
@@ -68,7 +68,7 @@ const Terms = () => {
         </div>
       </section>
 
-      {/* User Responsibilities Section */}
+  
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.h2
@@ -109,7 +109,7 @@ const Terms = () => {
         </div>
       </section>
 
-      {/* Service Usage Section */}
+  
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-6">
           <motion.h2
@@ -159,7 +159,7 @@ const Terms = () => {
         </div>
       </section>
 
-      {/* Privacy Section */}
+ 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.h2
@@ -192,7 +192,7 @@ const Terms = () => {
         </div>
       </section>
 
-      {/* Disclaimers Section */}
+   
       <section className="py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
         <div className="container mx-auto px-6">
           <motion.h2

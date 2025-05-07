@@ -3,6 +3,7 @@ import { FaRocket } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link, useNavigate } from 'react-router';
+import PageTitle from '../components/PageTitle';
 
 const CommingSoon = () => {
   const { ref, inView } = useInView({
@@ -10,9 +11,6 @@ const CommingSoon = () => {
     threshold: 0.3,
   });
 
-  useEffect(() => {
-    document.title = "comingSoon"
-  },[])
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -34,7 +32,10 @@ const CommingSoon = () => {
   const navigate = useNavigate()
 
   return (
+    <>
+      <PageTitle title={"ComingSoon | JOB S Y "} ></PageTitle>
     <motion.section
+      
       ref={ref}
       variants={containerVariants}
       initial="hidden"
@@ -66,7 +67,8 @@ const CommingSoon = () => {
           <button className=' bg-white text-primary font-semibold py-3 px-8 rounded-full hover:bg-yellow-300 transition-colors duration-300 ml-7' onClick={()=>navigate(-1)}>Go Back</button>
         </motion.div>
       </div>
-    </motion.section>
+      </motion.section>
+      </>
   );
 };
 

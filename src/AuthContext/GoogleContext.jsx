@@ -1,12 +1,14 @@
 import { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword,  } from "firebase/auth";
 import { auth } from '../FireBase/Firebase_init';
-import { toast } from 'react-toastify';
 export const AuthContext = createContext();
 
 const GoogleContext = ({ children }) => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+    const [photoUrl, setPhotoUrl] = useState("");
+    const [name, setName] = useState("");
+
 
     
     const signInEmailPassword = (email, password) => {
@@ -14,6 +16,8 @@ const GoogleContext = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
+    
+      
 
     const login = (email, password) => {
         setIsLoading(true)
@@ -35,7 +39,6 @@ const GoogleContext = ({ children }) => {
     },[])
 
 
-
     const info = {
         signInEmailPassword,
         setUser,
@@ -43,6 +46,11 @@ const GoogleContext = ({ children }) => {
         login,
         isLoading,
         resetPassword,
+        setPhotoUrl,
+        setName,
+        photoUrl,
+        name,
+        setIsLoading,
     }
     return (
         <AuthContext value={info}>
