@@ -55,9 +55,11 @@ const Nav = () => {
         <div className="flex gap-16">
           <ul className="items-stretch hidden space-x-3 lg:flex">{links}</ul>
           <div className="items-center gap-12 flex-shrink-0 hidden lg:flex">
-            <Link to="/register"> <button className="btn btn-primary self-center px-8 py-3 rounded">
+            {
+              user?"": <Link to="/register"> <button className="btn btn-primary self-center px-8 py-3 rounded">
               Register
             </button> </Link>
+            }
             {
               user ? <button onClick={()=>{handleLogOut()}} className="btn btn-primary self-center px-8 py-3 rounded">
               Logout
@@ -110,7 +112,23 @@ const Nav = () => {
           >
             ✕
           </span>
-          <ul className="mt-16 space-y-4">{links}</ul>
+          <ul className="mt-16 space-y-4">{links}
+          {
+              user?"": <Link to="/register"> <button className="mb-7 btn btn-primary self-center px-8 py-3 rounded">
+              Register
+            </button> </Link>
+            }
+            {
+              user ? <button onClick={() => { handleLogOut() }} className="btn btn-primary self-center px-8 py-3 rounded">
+                Logout
+              </button>
+                :
+                <Link to="/login">
+                  <button className="btn btn-primary self-center px-8 py-3 rounded">
+                    Login
+                  </button>
+                </Link>}
+          </ul>
         </div>
       </div>
       <div

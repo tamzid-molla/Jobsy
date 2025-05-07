@@ -10,6 +10,8 @@ import CommingSoon from '../ExtraPage/CommingSoon';
 import Login from '../components/Login';
 import Register from '../components/Register';
 import PrivateRoute from '../AuthContext/PrivateRoute';
+import ErrorPage from '../pages/ErrorPage';
+import ForgotPassword from '../pages/ForgotPassword';
 
 export const router = createBrowserRouter([
     {
@@ -51,7 +53,15 @@ export const router = createBrowserRouter([
             {
                 path: "/register",
                 Component: Register
+            },
+            {
+                path: "/resetPass",
+                Component: ForgotPassword
+            },
+            {
+                path: "*",
+                Component: ErrorPage
             }
         ]
-    }
+    },
 ])

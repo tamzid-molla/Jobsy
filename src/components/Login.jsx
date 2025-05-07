@@ -3,16 +3,17 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import { FaEnvelope, FaLock, FaGoogle, FaExclamationCircle } from 'react-icons/fa';
 import { AuthContext } from '../AuthContext/GoogleContext';
 import { toast } from 'react-toastify';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from '../FireBase/Firebase_init';
 
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { login, setUser, resetPassword } = useContext(AuthContext); 
+  const { login, setUser } = useContext(AuthContext); 
   const navigate = useNavigate();
   const location = useLocation();
-  // console.log(error);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,9 +24,15 @@ const Login = () => {
     }).catch(error => setError(error.message))
   };
 
+  const provider =new GoogleAuthProvider()
   const handleGoogleLogin = () => {
-    // Placeholder for your Google authentication logic
-    // setError('Google authentication to be implemented');
+    signInWithPopup(auth, provider).then(res => {
+      setUser(res.user)
+      navigate(`${location?.state? location.state:"/"}`)
+      toast.success("Google SignUp Successfully");
+    }).catch(error => {
+     setError(error.message)
+   })
   };
 
   // Clear error message after 5 seconds
@@ -89,9 +96,11 @@ const Login = () => {
           </div>
 
           <div className="flex justify-end mb-5">
-            <button onClick={()=>resetPassword(email)} className="text-sm text-blue-600 hover:underline">
+            
+            <button type='button' onClick={()=> navigate("/resetPass",{ state: email}) } className="text-sm text-blue-600 hover:underline">
               Forgot Password?
             </button>
+           
           </div>
 
           <button

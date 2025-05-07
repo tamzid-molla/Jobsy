@@ -8,17 +8,8 @@ const GoogleContext = ({ children }) => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser);
-            setIsLoading(false)
-        })
-        return () => {
-            unSubscribe()
-        }
-    },[])
-
-    const signInWithEmailPassword = (email, password) => {
+    
+    const signInEmailPassword = (email, password) => {
         setIsLoading(true)
         return createUserWithEmailAndPassword(auth, email, password);
     }
@@ -30,15 +21,23 @@ const GoogleContext = ({ children }) => {
     }
 
     const resetPassword = (email) => {
-        sendPasswordResetEmail(auth, email).then(() => {
-            toast.success("Check yor email")
-        }).catch(error => {
-            toast.warn(`Oh! ${error.message},please try again`)
-        })
+       return sendPasswordResetEmail(auth, email)
     }
 
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+            setIsLoading(false)
+        })
+        return () => {
+            unSubscribe()
+        }
+    },[])
+
+
+
     const info = {
-        signInWithEmailPassword,
+        signInEmailPassword,
         setUser,
         user,
         login,

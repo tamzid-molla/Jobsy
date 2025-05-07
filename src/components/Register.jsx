@@ -1,7 +1,10 @@
-import React, { useState, useEffect, use, useContext } from 'react';
-import { Link } from 'react-router';
+import React, { useState, useEffect, useContext } from 'react';
+import { Link, useNavigate } from 'react-router';
 import { FaUser, FaEnvelope, FaImage, FaLock, FaGoogle, FaExclamationCircle } from 'react-icons/fa';
 import { AuthContext } from '../AuthContext/GoogleContext';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from '../FireBase/Firebase_init';
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -9,22 +12,46 @@ const Register = () => {
   const [photoUrl, setPhotoUrl] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  const { signInWithEmailPassword,setUser} = useContext(AuthContext);
+  const { signInEmailPassword,setUser,user} = useContext(AuthContext);
+
+  const uppercase = /[A-Z]/;
+  const lowercase = /[a-z]/;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, photoUrl, password);
-    signInWithEmailPassword(email, password)
+
+    if (user) {
+      setError("User Already Login")
+      return
+    }
+    if (!uppercase.test(password)) {
+      setError("Password must include at least one uppercase letter");
+      return 
+    }
+    if (!lowercase.test(password)) {
+      setError("Password must include at least one lowercase letter");
+      return 
+    }
+
+    signInEmailPassword(email, password)
       .then(result => {
         setUser(result.user);
+        navigate(`${location?.state ? location.state : "/"}`);
     }).catch(error => setError(error.message))
     
   };
 
+   const provider =new GoogleAuthProvider()
   const handleGoogleLogin = () => {
-    // Placeholder for your Google authentication logic
-    setError('Google authentication to be implemented');
+    signInWithPopup(auth, provider).then(res => {
+          setUser(res.user)
+          navigate(`${location?.state? location.state:"/"}`)
+          toast.success("Google SignUp Successfully");
+        }).catch(error => {
+         setError(error.message)
+       })
   };
 
   // Clear error message after 5 seconds
@@ -34,6 +61,10 @@ const Register = () => {
       return () => clearTimeout(timer);
     }
   }, [error]);
+
+  useEffect(() => {
+          document.title = `register`; 
+      },[])
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">

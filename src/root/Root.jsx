@@ -1,11 +1,12 @@
-import React from 'react';
+
 import Nav from '../components/Nav';
-import { Outlet } from 'react-router';
+import { Outlet,} from 'react-router';
 import Footer from '../components/Footer';
 import { ToastContainer } from 'react-toastify';
 
-
 const Root = () => {
+  
+
     return (
         <div className="bg-[#FFFFFF]">
                 <Nav></Nav>
