@@ -11,7 +11,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { login, setUser } = useContext(AuthContext); 
+  const { login, setUser,setIsLoading, } = useContext(AuthContext); 
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -20,7 +20,10 @@ const Login = () => {
     login(email, password).then(res => {
       setUser(res.user)
       navigate(`${location?.state? location.state:"/"}`)
-    }).catch(error => setError(error.message))
+    }).catch(error => {
+      setError(error.message) 
+      setIsLoading(false)
+    })
   };
 
   const provider =new GoogleAuthProvider()
