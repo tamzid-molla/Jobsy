@@ -4,6 +4,9 @@ export const CompaniesDataContext = createContext();
 
  const CompaniesContext = ({ children }) => {
      const [companies, setCompanies] = useState([]);
+
+
+     
      
     const companiesData = {
         companies,
