@@ -59,7 +59,8 @@ const UpdateProfile = () => {
                           id="photoURL"
                           name='photo'
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-              placeholder="https://example.com/photo.jpg"
+                          placeholder="https://example.com/photo.jpg"
+                          required
             />
           </div>
 
@@ -72,7 +73,8 @@ const UpdateProfile = () => {
                           id="name"
                           name='name'
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-              placeholder="Your Name"
+                          placeholder="Your Name"
+                          required
             />
           </div>
 

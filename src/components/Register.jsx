@@ -99,6 +99,7 @@ const Register = () => {
                 onChange={(e) => setName(e.target.value)}
                 className="w-full p-2.5 border-none rounded-lg focus:outline-none"
                 placeholder="Enter your name"
+                required
               />
             </div>
           </div>
@@ -116,6 +117,7 @@ const Register = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full p-2.5 border-none rounded-lg focus:outline-none"
                 placeholder="Enter your email"
+                required
               />
             </div>
           </div>
@@ -133,6 +135,7 @@ const Register = () => {
                 onChange={(e) => setPhotoUrl(e.target.value)}
                 className="w-full p-2.5 border-none rounded-lg focus:outline-none"
                 placeholder="Enter your photo URL"
+                required
               />
             </div>
           </div>
@@ -150,6 +153,7 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full p-2.5 border-none rounded-lg focus:outline-none"
                 placeholder="Enter your password"
+                required
               />
             </div>
             <p className="text-xs text-gray-600 mt-2">
