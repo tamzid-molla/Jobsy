@@ -13,6 +13,7 @@ import PrivateRoute from '../AuthContext/PrivateRoute';
 import ErrorPage from '../pages/ErrorPage';
 import ForgotPassword from '../pages/ForgotPassword';
 import ProfilePage from '../pages/ProfilePage';
+import UpdateProfile from '../pages/UpdateProfile';
 
 export const router = createBrowserRouter([
     {
@@ -62,6 +63,10 @@ export const router = createBrowserRouter([
             {
                 path: "/profile",
                 Component: ProfilePage
+            },
+            {
+                path: "/updateprofile",
+                Component: UpdateProfile
             },
             {
                 path: "*",
